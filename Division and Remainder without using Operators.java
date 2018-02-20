@@ -1,4 +1,6 @@
 //Division and Remainder without using / and % operators 
+//Time Complexity O(n^2)
+//Space Complexity O(1)
 
 import java.util.*;
 public class Main
@@ -9,7 +11,7 @@ public class Main
 	    for(int i=0;i<d;i++)
 	     {
 	         int a=sc.nextInt();
-		     int b=sc.nextInt();
+		 int b=sc.nextInt();
 	         quo(a,b);
 	         rem(a,b);
 	     }
