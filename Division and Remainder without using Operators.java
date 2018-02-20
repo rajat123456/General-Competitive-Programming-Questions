@@ -18,11 +18,14 @@ public class Main
 			System.out.println("Undefine");
 			return;
 		    }
+		    else
+		    {
 		         while(a>=b)
 		       {
 		         a=a-b;
 		         ++q;
 		       }
+		    }
 		    
 		      System.out.println("Quotient is "+q);
 		      System.out.println("Remainder is "+a);
