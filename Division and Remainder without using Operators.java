@@ -1,5 +1,5 @@
 //Division and Remainder without using / and % operators 
-//Time Complexity O(n^2)
+//Time Complexity O(n)
 //Space Complexity O(1)
 
 import java.util.*;
@@ -12,70 +12,21 @@ public class Main
 	     {
 	         int a=sc.nextInt();
 		 int b=sc.nextInt();
-	         quo(a,b);
-	         rem(a,b);
-	     }
-	     
-		}
-		static void quo(int a, int b)
-		 {
-		     
-		     int total=0;
-		     int divisor=b;
-		     int divident=a;
-		     if(a==0 && b==0)
-		     {
-		     System.out.println("Undefined");
-		     return;
-		     }
-		     else if(b>a)
-		     {
-		     System.out.println("Quotient is 0");
-		     return;
-		     }
-		     int i;
-		     for(i=1;i<=a;i++)
-		      {
-		          total=divisor*i;
-		          if(total>divident)
-		          {
-		          System.out.println("Quotient is "+(i-1));
-		          break;
-		          }
-		          else if(total==divident)
-		          {
-		          System.out.println("Quotient is "+i);
-		          break;
-		          }
-		     
-		      }
-		      return;
-		           
-		 }
-		 
-		 static void rem(int a, int b)
-		 {
-		     int divisor=b;
-		     int divident=a;
-		     int k=a;
-		     if(a==0 && b==0)
-		     {
-		      System.out.println("Undefined");
-		      return;
-		     }
-		      else if(b>a)
-		     {
-		     System.out.println("Remainder is "+a);
-		     return;
-		     }
-		     else
-		     {
-		         while(k>=b)
+	         int q=0;
+		    if(b==0)
+		    {
+			System.out.println("Undefine");
+			return;
+		    }
+		         while(a>=b)
 		       {
-		        k=k-b;
+		         a=a-b;
+		         ++q;
 		       }
-		     }
-		      System.out.println("Remainder is "+k);
+		    
+		      System.out.println("Quotient is "+q);
+		      System.out.println("Remainder is "+a);
 		     
-		 }
+	     }
+}
 }
