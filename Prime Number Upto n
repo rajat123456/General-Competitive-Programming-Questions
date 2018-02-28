@@ -1,4 +1,5 @@
 //Prime upto 'n' usinbg Trial Devision Method
+//Time Complexity O(n*sqrt(n))
 
 public class Main
 {
