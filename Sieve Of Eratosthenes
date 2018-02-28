@@ -1,4 +1,5 @@
 //Prime upto 'n' using 'Sieve Of Eratosthenes'
+//Time Compl O(nloglogn)
 
 public class Main
 {
