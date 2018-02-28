@@ -3,7 +3,6 @@
 
 public class Main
 {
-    static int flag;
     static int n=32;
 	public static void main(String[] args) {
      
