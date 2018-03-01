@@ -1,0 +1,35 @@
+//Whether given number is Lucky or not
+
+import java.util.*;
+public class Main
+{
+    static int counter=2;
+	public static void main(String[] args) {
+	    
+	    Scanner sc=new Scanner(System.in);
+		int lucky=sc.nextInt();
+		boolean result=func(lucky);
+		if(result==true)
+		{
+		    System.out.println(lucky+" is a lucky number");
+		}
+		
+		else
+		System.out.println(lucky+" is not a lucky number");
+	}
+	
+	static boolean func(int a)
+	 {
+	     if(counter>a)
+	     {
+	         return true;
+	     }
+	     
+	     else if(a%counter==0)
+	     return false;
+	     
+	     a-=a/counter;
+	     ++counter;
+	     return func(a);
+	 }
+}
