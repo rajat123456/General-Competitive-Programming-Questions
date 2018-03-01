@@ -1,0 +1,54 @@
+//Prime Factorization of a Number
+//Time Comp-> O(sqrt(n))
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+
+    //Approach 1-> Loop through 2 to n, since 1 is not a prime
+    
+    /*
+     for(int i=2;i<=n;i++)
+     {
+         int counter=0;
+         if(n%i==0)
+         {
+             while(n%i==0)
+              {
+                  n=n/i;
+                  ++counter;
+              }
+         }
+         System.out.println(i+" With occurance of "+counter+" times");
+     }
+     */
+     
+     //Approach 2-> Loop through 2 to Sqrt(n), since 1 is not a prime
+    
+     for(int i=2;i<=Math.sqrt(n);i++)
+     {
+         int counter=0;
+         if(n%i==0)
+         {
+             while(n%i==0)
+              {
+                  n=n/i;
+                  ++counter;
+              }
+              
+              System.out.println(i+" With occurance of "+counter+" times");
+         }
+         
+     } 
+        
+        if(n!=0) //If it is not divisible by any number and only by itself like 7 or it is prime
+        {
+            System.out.println(n+" With occurance of 1 time");
+        }
+     
+	}
+}
