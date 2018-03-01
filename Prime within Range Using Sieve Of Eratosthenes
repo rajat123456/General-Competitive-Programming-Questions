@@ -18,6 +18,7 @@ public class Main
 		
 		for(int i=lower+1;i<=upper-1;i++)
 		 {
+		     if(arr[i]==1) // Here it will enter only to those which are not Struk Off
 		     for(int j=2;j<Math.sqrt(i);j++)
 		      {
 		          if(i%j==0)
