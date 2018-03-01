@@ -1,0 +1,48 @@
+//Prime number within Range Using Sieve Of Eratosthenes
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner sc=new Scanner(System.in);
+		int lower=sc.nextInt();
+		int upper=sc.nextInt();
+		
+		int arr[]=new int[upper+1];
+		
+		for(int i=lower+1;i<=upper-1;i++)
+	     {
+	         arr[i]=1;
+	     }
+		
+		for(int i=lower+1;i<=upper-1;i++)
+		 {
+		     for(int j=2;j<Math.sqrt(i);j++)
+		      {
+		          if(i%j==0)
+		           {
+		               arr[i]=0;
+		               break;
+		           }
+		      }
+		      
+		      for(int k=2;upper>=i*k;k++)
+		       {
+		           arr[i*k]=0;
+		       }
+		 }
+		 
+		 for(int j=lower+1;j<=upper-1;j++)
+		  {
+		      if(arr[j]==1)
+		       {
+		           System.out.print(arr[j]+" ");
+		       }
+		       
+		       else 
+		       
+		       System.out.print("0 ");
+		  }
+	}
+}
