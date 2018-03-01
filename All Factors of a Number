@@ -1,0 +1,54 @@
+//All Factors of a Number
+//Time Comp-> O(sqrt(n))
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    List<Integer> l=new ArrayList();
+
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+
+    //Approach 1-> Loop through 1 to n
+    
+    /* for(int i=1;i<=n;i++)
+     {
+         if(n%i==0)
+         l.add(i);
+     } 
+     
+     System.out.println(l);
+     */
+    	
+    //Approach 2-> Loop through 2 to n/2(since 1 and n are already its factors)
+    
+    /*
+    l.add(1);
+    l.add(n);
+    	 for(int i=2;i<=n/2;i++)
+     {
+         if(n%i==0)
+         l.add(i);
+     } 
+    	System.out.println(l);
+    	*/
+    	
+    //Approach 3->Efficient one(Running way through Sqrt(n))
+    
+    for(int i=1;i<=Math.sqrt(n);i++)
+     {
+         if(n%i==0)
+         {
+             l.add(i);
+             
+             if(Math.sqrt(n)!=i) //This is case for Perfect Square, so that it won't added twice
+             {
+                 l.add(n/i); // Suppose a=4, then (b=n/a=>36/4=>9)
+             }
+         }
+     }
+     Collections.sort(l); //For sorting List, for Arrays we use Arrays.sort();
+     System.out.println(l);
+	}
+}
