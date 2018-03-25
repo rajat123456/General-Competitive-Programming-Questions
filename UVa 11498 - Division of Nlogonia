@@ -1,0 +1,39 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	
+	int t;
+	while((t=sc.nextInt())!=0)
+	{
+	    int a=sc.nextInt();
+	    int b=sc.nextInt();
+	    
+	    while(t!=0)
+	    {
+	        int c=sc.nextInt();
+	        int d=sc.nextInt();
+	        
+	        if(c>a && d>b)
+	        System.out.println("NE");
+	        
+	        else if(c>a && d<b)
+	        System.out.println("SE");
+	        
+	        else if(c<a && d<b)
+	        System.out.println("SO");
+	        
+	        else if(c<a && d>b)
+	        System.out.println("NO");
+	        
+	        else
+	        System.out.println("divisa");
+	        
+	        --t;
+	        
+	    }
+	}
+	    
+	}
+}
