@@ -1,5 +1,5 @@
-//All Factors of a Number
-//Time Comp-> O(sqrt(n))
+// All Factors of a Number
+// Time Comp-> O(sqrt(n))
 
 import java.util.*;
 public class Main
