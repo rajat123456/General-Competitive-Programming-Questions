@@ -1,3 +1,15 @@
+/*Printing Pattern like this->
+
+5 (Number of rows)
+
+1	
+2	9	
+3	8	10	
+4	7	11	14	
+5	6	12	13	15	
+
+*/
+
 import java.util.*;
 public class Main
 {
