@@ -1,6 +1,5 @@
 //https://www.spoj.com/problems/AMR11E/
 
-//Prime Numbers Between Range 2 to N
 import java.util.*;
 public class Main
 {
