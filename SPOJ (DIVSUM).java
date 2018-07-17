@@ -1,4 +1,4 @@
-//https://www.spoj.com/problems/LASTDIG/
+//https://www.spoj.com/problems/DIVSUM/
 
 import java.util.*;
 public class Main
