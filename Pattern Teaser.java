@@ -15,7 +15,7 @@ public class Main
 {
 	public static void main(String[] args) {
 		
-		Scanner sc=new Scanner(System.in);
+        Scanner sc=new Scanner(System.in);
         int rows=sc.nextInt();
         System.out.println();
         int n=1;
