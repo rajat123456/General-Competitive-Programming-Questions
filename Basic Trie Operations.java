@@ -151,7 +151,7 @@ public class Main
 	System.out.println(t.search("NEWS"));
 	System.out.println(t.search("NEW"));
 	
-	t.add("APPLE");
+    t.add("APPLE");
     t.add("APPLE");   
     t.add("APP");     
     System.out.println(t.startsWith("APP")); 
