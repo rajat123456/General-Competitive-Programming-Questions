@@ -1,4 +1,6 @@
 //Trie Data Structure Implementation
+//Time Comp of Tries->O(word length)
+//Applications of Tries-> Auto Completeness in Searhing, Spell Checking, Pattern Matching
 //Insertion, Deletetion, Searching, startsWith, Number of Words in Trie
 
 class TrieNode
