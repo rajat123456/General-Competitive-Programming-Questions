@@ -1,5 +1,5 @@
 //Trie Data Structure Implementation
-//Insertion(), Deletion(), Searching(), startsWith() in Trie
+//Insertion, Deletetion, Searching, startsWith, Number of Words in Trie
 
 class TrieNode
 {
@@ -20,6 +20,7 @@ class TrieNode
 class Trie
 {
     TrieNode root;
+    private int NoOfWords=0;
     
     public Trie()
     {
@@ -36,6 +37,7 @@ class Trie
         if(word.length()==0)
         {
             root.isTerm=true;
+            ++NoOfWords;
             return;
         }
         
@@ -84,6 +86,7 @@ class Trie
         if(word.length()==0)
         {
             root.isTerm=false;
+            --NoOfWords;
             return;
         }
         
@@ -127,6 +130,10 @@ class Trie
            return startsWithword(word.substring(1),child);      
         }
     }
+
+	public int countWords() {
+        return NoOfWords;	
+	}
 }
 
 public class Main
@@ -138,6 +145,8 @@ public class Main
     t.add("GATE");
     t.add("NEW");
     t.add("NEWS");
+    
+	System.out.println(t.countWords());
 	
 	System.out.println(t.search("FATE"));
 	System.out.println(t.search("ATE"));
@@ -147,14 +156,18 @@ public class Main
 	t.delete("ATE");
 	t.delete("NEWS");
 	
+	System.out.println(t.countWords());
+	
 	System.out.println(t.search("ATE"));
 	System.out.println(t.search("NEWS"));
 	System.out.println(t.search("NEW"));
 	
-    t.add("APPLE");
-    t.add("APPLE");   
-    t.add("APP");     
+	t.add("APPLE");
+        t.add("APP");     
+    
     System.out.println(t.startsWith("APP")); 
     
-	}
+    System.out.println(t.countWords());
+    
+   }
 }
