@@ -1,6 +1,6 @@
 //Problem->https://leetcode.com/problems/edit-distance/description/
 
-//Time Comp-> O(m*n), "m"= length of 1st stirng and "n"= length of 2nd string->This much Unique calss
+//Time Comp-> O(m*n), "m"= length of 1st stirng and "n"= length of 2nd string->This much Unique calls
 //Space Comp-> O(m*n)
 
 //Solution using Top Down Memoization DP
