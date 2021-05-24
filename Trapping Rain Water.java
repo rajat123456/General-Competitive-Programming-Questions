@@ -6,17 +6,18 @@
 */
 
 
-class Solution {
+    class Solution {
     public int trap(int[] height) {
         
+      
+            // if given as empty array, answer is 0
             if(height.length==0)
                 return 0;
         
             int max=0;
-        
             int index=-1;
 
-            //maximum
+            // Finding maximum in whole array
             for(int g=0;g<height.length;g++)
             {
                 if(height[g]>max)
@@ -28,6 +29,8 @@ class Solution {
 
             boolean flag=false;
             int maxr=-1;
+      
+            // Finding maximum in whole array from right side, so as to conifrm whether the maximum element is unique or duplicated
             for(int z=height.length-1;z>=0;z--)
             {
                 if( (height[z]==max) && (z!=index) ) 
@@ -44,6 +47,8 @@ class Solution {
             int water=0;
             int left=-1;
             int x=0;
+      
+            // Scanning array from left to Right
             while(x!=maxr)
             {
                 if(height[x]!=0 && left==-1)
@@ -64,6 +69,7 @@ class Solution {
                 ++x;
             }
 
+            // This scans array from Right to Left, only if we encountered the maximum element and still there are elements exists in array for scanning
             if(x!=height.length-1)
             {
                 int curmax=height[height.length-1];
@@ -81,7 +87,6 @@ class Solution {
             }
 
             return water;
-
-        
+      
     }
 }
